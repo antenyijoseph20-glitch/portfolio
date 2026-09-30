@@ -1,0 +1,711 @@
+/* =========================================================
+   PORTFOLIO STYLESHEET
+   Antenyi Joseph Ochohepo
+   ========================================================= */
+
+/* =========================================================
+   1. RESET & BASE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: #ffffff;
+    color: #172033;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: #172033;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   2. GLOBAL LAYOUT
+   ========================================================= */
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-alt {
+    background: #f7f8fa;
+}
+
+.section-label {
+    margin-bottom: 12px;
+    color: #52606d;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.section h2 {
+    max-width: 760px;
+    margin-bottom: 24px;
+    color: #101828;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin-bottom: 48px;
+    color: #667085;
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   3. HEADER / NAVIGATION
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid #eaecf0;
+
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo {
+    color: #101828;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #475467;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #172033;
+
+    transition: width 0.2s ease;
+}
+
+.nav-links a.active {
+    color: #101828;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   4. HERO
+   ========================================================= */
+
+.hero {
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f7f8fa 100%
+        );
+
+    border-bottom: 1px solid #eaecf0;
+}
+
+.hero-content {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    margin-bottom: 20px;
+
+    color: #52606d;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    color: #101828;
+    font-size: clamp(2.8rem, 7vw, 5.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+}
+
+.hero-text {
+    max-width: 760px;
+    margin-top: 28px;
+
+    color: #344054;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin-top: 20px;
+
+    color: #667085;
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+    margin-top: 36px;
+}
+
+
+/* =========================================================
+   5. BUTTONS
+   ========================================================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+    padding: 0 22px;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background: #172033;
+    color: #ffffff;
+}
+
+.button-primary:hover {
+    background: #0f1728;
+}
+
+.button-secondary {
+    background: #ffffff;
+    color: #172033;
+    border-color: #d0d5dd;
+}
+
+.button-secondary:hover {
+    background: #f9fafb;
+    border-color: #98a2b3;
+}
+
+
+/* =========================================================
+   6. ABOUT
+   ========================================================= */
+
+.about-content {
+    max-width: 780px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+
+    color: #475467;
+    font-size: 1.05rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   7. SKILLS
+   ========================================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    min-height: 180px;
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #d0d5dd;
+
+    box-shadow:
+        0 12px 30px rgba(16, 24, 40, 0.08);
+}
+
+.skill-card h3 {
+    margin-bottom: 12px;
+
+    color: #101828;
+    font-size: 1.05rem;
+}
+
+.skill-card p {
+    color: #667085;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   8. PROJECTS
+   ========================================================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.project-card {
+    display: flex;
+
+    min-height: 100%;
+
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d0d5dd;
+
+    box-shadow:
+        0 16px 36px rgba(16, 24, 40, 0.09);
+}
+
+.project-content {
+    width: 100%;
+    padding: 32px;
+}
+
+.project-type {
+    margin-bottom: 12px;
+
+    color: #667085;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.project-card h3 {
+    margin-bottom: 16px;
+
+    color: #101828;
+    font-size: 1.45rem;
+    line-height: 1.25;
+}
+
+.project-card p {
+    margin-bottom: 16px;
+
+    color: #667085;
+    font-size: 0.96rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.project-tags span {
+    padding: 5px 10px;
+
+    background: #f2f4f7;
+    border-radius: 999px;
+
+    color: #344054;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.project-status {
+    margin-top: 22px;
+    margin-bottom: 0 !important;
+
+    color: #344054 !important;
+    font-size: 0.85rem !important;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   9. DEVELOPMENT APPROACH
+   ========================================================= */
+
+.experience-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.experience-card {
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+}
+
+.experience-card h3 {
+    margin-bottom: 12px;
+
+    color: #101828;
+    font-size: 1.05rem;
+}
+
+.experience-card p {
+    color: #667085;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   10. CONTACT
+   ========================================================= */
+
+.contact-section {
+    background: #172033;
+    color: #ffffff;
+}
+
+.contact-section .section-label {
+    color: #98a2b3;
+}
+
+.contact-section h2 {
+    color: #ffffff;
+}
+
+.contact-content > p:not(.section-label) {
+    max-width: 680px;
+
+    margin-bottom: 30px;
+
+    color: #cbd5e1;
+    font-size: 1.05rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    padding: 0 20px;
+
+    border: 1px solid #475467;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-links a:hover {
+    background: #273249;
+    border-color: #667085;
+}
+
+
+/* =========================================================
+   11. FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #101828;
+    color: #98a2b3;
+}
+
+.footer-content {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-content p {
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   12. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible {
+    outline: 3px solid #667085;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   13. TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .skills-grid,
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        max-width: 760px;
+    }
+}
+
+
+/* =========================================================
+   14. MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(100% - 28px, 1120px);
+    }
+
+    .section {
+        padding: 72px 0;
+    }
+
+    .navbar {
+        min-height: auto;
+
+        padding: 18px 0;
+
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        gap: 10px 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.88rem;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 14vw, 4rem);
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .skills-grid,
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content {
+        padding: 26px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-links a {
+        width: 100%;
+    }
+
+    .footer-content {
+        padding: 24px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   15. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
