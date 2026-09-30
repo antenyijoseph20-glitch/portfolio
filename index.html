@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Antenyi Joseph Ochohepo | Software Developer</title>
+    <!-- =========================
+         PRIMARY SEO
+    ========================== -->
+
+    <title>
+        Antenyi Joseph Ochohepo | Software Developer
+    </title>
 
     <meta
         name="description"
-        content="Portfolio of Antenyi Joseph Ochohepo, a software developer building practical web and backend applications using Python and Go."
+        content="Antenyi Joseph Ochohepo is a Software Developer building practical web and backend applications using Go, Python, JavaScript, APIs, and modern software engineering practices."
     >
 
     <meta
@@ -19,10 +27,132 @@
         content="Antenyi Joseph Ochohepo"
     >
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    >
+
+    <link
+        rel="canonical"
+        href="https://antenyijoseph20-glitch.github.io/portfolio/"
+    >
+
+
+    <!-- =========================
+         FAVICON
+    ========================== -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="assets/favicon.svg"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="assets/favicon.svg"
+    >
+
+
+    <!-- =========================
+         OPEN GRAPH / LINKEDIN
+    ========================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Antenyi Joseph Ochohepo | Software Developer"
+    >
+
+    <meta
+        property="og:description"
+        content="Software Developer building practical web applications, backend systems, and software solutions focused on real-world problems."
+    >
+
+    <meta
+        property="og:url"
+        content="https://antenyijoseph20-glitch.github.io/portfolio/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://antenyijoseph20-glitch.github.io/portfolio/assets/profile.jpg"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Antenyi Joseph Ochohepo - Software Developer"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Antenyi Joseph Ochohepo"
+    >
+
+
+    <!-- =========================
+         TWITTER / X
+    ========================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Antenyi Joseph Ochohepo | Software Developer"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Software Developer building practical web applications and backend systems."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://antenyijoseph20-glitch.github.io/portfolio/assets/profile.jpg"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="Antenyi Joseph Ochohepo - Software Developer"
+    >
+
+
+    <!-- =========================
+         STYLESHEET
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
 
 <body>
+
+    <!-- =========================
+         ACCESSIBILITY
+    ========================== -->
+
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
+
 
     <!-- =========================
          HEADER / NAVIGATION
@@ -30,39 +160,80 @@
 
     <header class="site-header">
 
-        <nav class="navbar container">
+        <nav
+            class="navbar container"
+            aria-label="Primary navigation"
+        >
 
             <a
                 class="logo"
                 href="#home"
                 aria-label="Antenyi Joseph home"
             >
-                <span class="logo-mark">AJ</span>
+
+                <span
+                    class="logo-mark"
+                    aria-hidden="true"
+                >
+                    AJ
+                </span>
 
                 <span class="logo-text">
                     Antenyi Joseph
                 </span>
+
             </a>
 
-            <div class="nav-links">
 
-                <a href="#about">
+            <!-- Mobile navigation toggle -->
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+
+            </button>
+
+
+            <div
+                id="primary-navigation"
+                class="nav-links"
+            >
+
+                <a
+                    href="#about"
+                >
                     About
                 </a>
 
-                <a href="#skills">
+                <a
+                    href="#skills"
+                >
                     Skills
                 </a>
 
-                <a href="#projects">
+                <a
+                    href="#projects"
+                >
                     Projects
                 </a>
 
-                <a href="#experience">
+                <a
+                    href="#experience"
+                >
                     Approach
                 </a>
 
-                <a href="#contact">
+                <a
+                    href="#contact"
+                >
                     Contact
                 </a>
 
@@ -73,7 +244,11 @@
     </header>
 
 
-    <main>
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main id="main-content">
 
         <!-- =========================
              HERO
@@ -82,11 +257,19 @@
         <section
             id="home"
             class="hero"
+            aria-labelledby="hero-title"
         >
 
-            <div class="hero-background-shape hero-shape-one"></div>
+            <div
+                class="hero-background-shape hero-shape-one"
+                aria-hidden="true"
+            ></div>
 
-            <div class="hero-background-shape hero-shape-two"></div>
+            <div
+                class="hero-background-shape hero-shape-two"
+                aria-hidden="true"
+            ></div>
+
 
             <div class="container hero-content">
 
@@ -96,20 +279,24 @@
                         SOFTWARE DEVELOPER
                     </p>
 
-                    <h1>
+
+                    <h1 id="hero-title">
                         Building software
                         <span>with purpose.</span>
                     </h1>
+
 
                     <p class="hero-introduction">
                         Hi, I'm
                         <strong>Antenyi Joseph Ochohepo</strong>.
                     </p>
 
+
                     <p class="hero-text">
                         I build practical software solutions that solve
                         real-world problems.
                     </p>
+
 
                     <p class="hero-description">
                         I develop web and backend applications using
@@ -117,6 +304,7 @@
                         problem-solving, clean architecture,
                         continuous learning, and reliable software.
                     </p>
+
 
                     <div class="hero-actions">
 
@@ -127,6 +315,7 @@
                             View My Projects
                             <span aria-hidden="true">→</span>
                         </a>
+
 
                         <a
                             class="button button-secondary"
@@ -140,29 +329,38 @@
 
                     </div>
 
-                    <div class="hero-social-links">
+
+                    <div
+                        class="hero-social-links"
+                        aria-label="Social and contact links"
+                    >
 
                         <a
                             href="https://github.com/antenyijoseph20-glitch"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visit Antenyi Joseph's GitHub profile"
                         >
                             GitHub
                         </a>
 
-                        <span>•</span>
+                        <span aria-hidden="true">•</span>
 
                         <a
                             href="https://www.linkedin.com/in/antenyi-joseph-727a21181"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visit Antenyi Joseph's LinkedIn profile"
                         >
                             LinkedIn
                         </a>
 
-                        <span>•</span>
+                        <span aria-hidden="true">•</span>
 
-                        <a href="mailto:antenyijoseph20@gmail.com">
+                        <a
+                            href="mailto:antenyijoseph20@gmail.com"
+                            aria-label="Send Antenyi Joseph an email"
+                        >
                             Email
                         </a>
 
@@ -177,21 +375,35 @@
 
                 <div class="hero-image-wrapper">
 
-                    <div class="hero-image-border"></div>
+                    <div
+                        class="hero-image-border"
+                        aria-hidden="true"
+                    ></div>
+
 
                     <div class="hero-image-card">
 
                         <img
                             src="assets/profile.jpg"
-                            alt="Antenyi Joseph Ochohepo"
+                            alt="Portrait of Antenyi Joseph Ochohepo, Software Developer"
                             class="profile-image"
+                            width="800"
+                            height="800"
+                            fetchpriority="high"
                         >
 
                     </div>
 
-                    <div class="hero-image-badge">
 
-                        <span class="badge-dot"></span>
+                    <div
+                        class="hero-image-badge"
+                        aria-label="Professional status"
+                    >
+
+                        <span
+                            class="badge-dot"
+                            aria-hidden="true"
+                        ></span>
 
                         <span>
                             Software Developer
@@ -203,7 +415,11 @@
 
             </div>
 
-            <div class="hero-scroll-indicator">
+
+            <div
+                class="hero-scroll-indicator"
+                aria-hidden="true"
+            >
 
                 <span></span>
 
@@ -223,6 +439,7 @@
         <section
             id="about"
             class="section"
+            aria-labelledby="about-title"
         >
 
             <div class="container">
@@ -233,7 +450,7 @@
                         ABOUT ME
                     </p>
 
-                    <h2>
+                    <h2 id="about-title">
                         Turning ideas into
                         <span>working software.</span>
                     </h2>
@@ -346,6 +563,7 @@
         <section
             id="skills"
             class="section section-dark"
+            aria-labelledby="skills-title"
         >
 
             <div class="container">
@@ -356,7 +574,7 @@
                         SKILLS
                     </p>
 
-                    <h2>
+                    <h2 id="skills-title">
                         Tools and technologies
                         <span>I work with.</span>
                     </h2>
@@ -374,11 +592,15 @@
 
                     <article class="skill-card">
 
-                        <div class="skill-icon">
+                        <div
+                            class="skill-icon"
+                            aria-hidden="true"
+                        >
                             GO
                         </div>
 
                         <div>
+
                             <h3>
                                 Go
                             </h3>
@@ -387,6 +609,7 @@
                                 Backend development, HTTP servers,
                                 web applications, and system design.
                             </p>
+
                         </div>
 
                     </article>
@@ -394,11 +617,15 @@
 
                     <article class="skill-card">
 
-                        <div class="skill-icon">
+                        <div
+                            class="skill-icon"
+                            aria-hidden="true"
+                        >
                             PY
                         </div>
 
                         <div>
+
                             <h3>
                                 Python
                             </h3>
@@ -407,6 +634,7 @@
                                 Application development, APIs,
                                 automation, and backend systems.
                             </p>
+
                         </div>
 
                     </article>
@@ -414,11 +642,15 @@
 
                     <article class="skill-card">
 
-                        <div class="skill-icon">
+                        <div
+                            class="skill-icon"
+                            aria-hidden="true"
+                        >
                             &lt;/&gt;
                         </div>
 
                         <div>
+
                             <h3>
                                 Web Development
                             </h3>
@@ -427,6 +659,7 @@
                                 HTML, CSS, JavaScript, HTTP,
                                 responsive interfaces, and REST APIs.
                             </p>
+
                         </div>
 
                     </article>
@@ -434,11 +667,15 @@
 
                     <article class="skill-card">
 
-                        <div class="skill-icon">
+                        <div
+                            class="skill-icon"
+                            aria-hidden="true"
+                        >
                             DB
                         </div>
 
                         <div>
+
                             <h3>
                                 Data &amp; Databases
                             </h3>
@@ -447,6 +684,7 @@
                                 SQL, PostgreSQL, SQLite, JSON,
                                 data modelling, and persistence.
                             </p>
+
                         </div>
 
                     </article>
@@ -454,11 +692,15 @@
 
                     <article class="skill-card">
 
-                        <div class="skill-icon">
+                        <div
+                            class="skill-icon"
+                            aria-hidden="true"
+                        >
                             GIT
                         </div>
 
                         <div>
+
                             <h3>
                                 Git &amp; GitHub
                             </h3>
@@ -467,6 +709,7 @@
                                 Version control, repositories,
                                 branches, commits, and collaboration.
                             </p>
+
                         </div>
 
                     </article>
@@ -474,11 +717,15 @@
 
                     <article class="skill-card">
 
-                        <div class="skill-icon">
+                        <div
+                            class="skill-icon"
+                            aria-hidden="true"
+                        >
                             CLI
                         </div>
 
                         <div>
+
                             <h3>
                                 Linux &amp; Development Tools
                             </h3>
@@ -487,6 +734,7 @@
                                 Linux terminal, VS Code,
                                 development workflows, and debugging.
                             </p>
+
                         </div>
 
                     </article>
@@ -505,6 +753,7 @@
         <section
             id="projects"
             class="section"
+            aria-labelledby="projects-title"
         >
 
             <div class="container">
@@ -515,7 +764,7 @@
                         FEATURED PROJECTS
                     </p>
 
-                    <h2>
+                    <h2 id="projects-title">
                         Software I've been
                         <span>building.</span>
                     </h2>
@@ -587,7 +836,7 @@
                                     rel="noopener noreferrer"
                                 >
                                     View GitHub
-                                    <span>↗</span>
+                                    <span aria-hidden="true">↗</span>
                                 </a>
 
                             </div>
@@ -655,7 +904,7 @@
                                     rel="noopener noreferrer"
                                 >
                                     View GitHub
-                                    <span>↗</span>
+                                    <span aria-hidden="true">↗</span>
                                 </a>
 
                             </div>
@@ -834,6 +1083,7 @@
         <section
             id="experience"
             class="section section-light"
+            aria-labelledby="experience-title"
         >
 
             <div class="container">
@@ -844,7 +1094,7 @@
                         DEVELOPMENT APPROACH
                     </p>
 
-                    <h2>
+                    <h2 id="experience-title">
                         How I approach
                         <span>software development.</span>
                     </h2>
@@ -942,9 +1192,13 @@
         <section
             id="contact"
             class="contact-section"
+            aria-labelledby="contact-title"
         >
 
-            <div class="contact-glow"></div>
+            <div
+                class="contact-glow"
+                aria-hidden="true"
+            ></div>
 
             <div class="container">
 
@@ -954,7 +1208,7 @@
                         CONTACT
                     </p>
 
-                    <h2>
+                    <h2 id="contact-title">
                         Let's build something
                         <span>useful.</span>
                     </h2>
@@ -966,6 +1220,7 @@
                         problem-solving skills.
                     </p>
 
+
                     <div class="contact-actions">
 
                         <a
@@ -973,27 +1228,31 @@
                             href="mailto:antenyijoseph20@gmail.com"
                         >
                             Email Me
-                            <span>→</span>
+                            <span aria-hidden="true">→</span>
                         </a>
+
 
                         <a
                             class="button button-outline-light"
                             href="https://github.com/antenyijoseph20-glitch"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visit Antenyi Joseph's GitHub profile"
                         >
                             GitHub
-                            <span>↗</span>
+                            <span aria-hidden="true">↗</span>
                         </a>
+
 
                         <a
                             class="button button-outline-light"
                             href="https://www.linkedin.com/in/antenyi-joseph-727a21181"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Visit Antenyi Joseph's LinkedIn profile"
                         >
                             LinkedIn
-                            <span>↗</span>
+                            <span aria-hidden="true">↗</span>
                         </a>
 
                     </div>
@@ -1020,6 +1279,7 @@
                 <a
                     class="footer-logo"
                     href="#home"
+                    aria-label="Return to Antenyi Joseph home"
                 >
                     Antenyi Joseph
                 </a>
@@ -1031,7 +1291,10 @@
             </div>
 
 
-            <div class="footer-links">
+            <nav
+                class="footer-links"
+                aria-label="Footer navigation"
+            >
 
                 <a href="#about">
                     About
@@ -1045,13 +1308,15 @@
                     Contact
                 </a>
 
-            </div>
+            </nav>
 
 
             <div class="footer-copy">
 
                 <p>
-                    &copy; 2026 Antenyi Joseph Ochohepo.
+                    &copy;
+                    <span id="current-year">2026</span>
+                    Antenyi Joseph Ochohepo.
                 </p>
 
                 <p>
@@ -1065,7 +1330,14 @@
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="js/script.js"
+        defer
+    ></script>
 
 </body>
 </html>

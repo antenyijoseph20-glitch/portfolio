@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Open navigation menu"
                 );
             });
-
         });
 
 
@@ -95,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 !clickedInsideNavigation &&
                 !clickedMenuButton
             ) {
+
                 navigation.classList.remove("open");
 
                 menuToggle.classList.remove("open");
@@ -110,7 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
             }
         });
-
     }
 
 
@@ -120,37 +119,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const revealElements =
         document.querySelectorAll(
-            ".section, .project-card, .skill-card, .highlight, .approach-card"
+            ".section, .project-card, .skill-card, .highlight-card, .experience-card"
         );
 
-    revealElements.forEach((element) => {
-        element.classList.add("reveal");
-    });
+    const reducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
 
-    const revealObserver =
-        new IntersectionObserver(
-            (entries, observer) => {
 
-                entries.forEach((entry) => {
+    /*
+       If the visitor prefers reduced motion, show everything
+       immediately instead of animating elements into view.
+    */
 
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
+    if (reducedMotion) {
 
-                    entry.target.classList.add("visible");
+        revealElements.forEach((element) => {
+            element.classList.add("visible");
+        });
 
-                    observer.unobserve(entry.target);
-                });
+    } else if ("IntersectionObserver" in window) {
 
-            },
-            {
-                threshold: 0.12
-            }
-        );
+        revealElements.forEach((element) => {
+            element.classList.add("reveal");
+        });
 
-    revealElements.forEach((element) => {
-        revealObserver.observe(element);
-    });
+        const revealObserver =
+            new IntersectionObserver(
+                (entries, observer) => {
+
+                    entries.forEach((entry) => {
+
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
+
+    } else {
+
+        /*
+           Fallback for older browsers without
+           IntersectionObserver support.
+        */
+
+        revealElements.forEach((element) => {
+            element.classList.add("visible");
+        });
+    }
 
 
     /* =====================================================
@@ -167,46 +197,47 @@ document.addEventListener("DOMContentLoaded", () => {
             "section[id]"
         );
 
-    const sectionObserver =
-        new IntersectionObserver(
-            (entries) => {
+    if ("IntersectionObserver" in window) {
 
-                entries.forEach((entry) => {
+        const sectionObserver =
+            new IntersectionObserver(
+                (entries) => {
 
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
+                    entries.forEach((entry) => {
 
-                    const currentSection =
-                        entry.target.id;
-
-                    navigationLinks.forEach((link) => {
-
-                        link.classList.remove("active");
-
-                        const linkTarget =
-                            link.getAttribute("href");
-
-                        if (
-                            linkTarget ===
-                            `#${currentSection}`
-                        ) {
-                            link.classList.add("active");
+                        if (!entry.isIntersecting) {
+                            return;
                         }
 
+                        const currentSection =
+                            entry.target.id;
+
+                        navigationLinks.forEach((link) => {
+
+                            link.classList.remove("active");
+
+                            const linkTarget =
+                                link.getAttribute("href");
+
+                            if (
+                                linkTarget ===
+                                `#${currentSection}`
+                            ) {
+                                link.classList.add("active");
+                            }
+                        });
                     });
 
-                });
+                },
+                {
+                    rootMargin: "-35% 0px -55% 0px"
+                }
+            );
 
-            },
-            {
-                rootMargin: "-35% 0px -55% 0px"
-            }
-        );
-
-    sections.forEach((section) => {
-        sectionObserver.observe(section);
-    });
+        sections.forEach((section) => {
+            sectionObserver.observe(section);
+        });
+    }
 
 
     /* =====================================================
@@ -227,15 +258,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            /*
+               Respect users who prefer reduced motion.
+            */
+
+            if (reducedMotion) {
+                return;
+            }
+
             event.preventDefault();
 
             target.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
-
         });
-
     });
 
 });
