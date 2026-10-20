@@ -8,36 +8,37 @@
    ========================================================= */
 
 :root {
-    --navy-950: #07111f;
-    --navy-900: #0b1728;
-    --navy-800: #10233d;
-    --navy-700: #17365f;
+    /* Professional monochrome palette */
+    --navy-950: #090909;
+    --navy-900: #111111;
+    --navy-800: #1b1b1b;
+    --navy-700: #303030;
 
-    --blue-600: #2563eb;
-    --blue-500: #3b82f6;
-    --teal-500: #14b8a6;
+    --blue-600: #c0c0c0;
+    --blue-500: #e5e5e5;
+    --teal-500: #a8a8a8;
 
     --white: #ffffff;
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-    --slate-500: #64748b;
-    --slate-600: #475569;
-    --slate-700: #334155;
-    --slate-800: #1e293b;
-    --slate-900: #0f172a;
+    --slate-50: #f5f5f5;
+    --slate-100: #e5e5e5;
+    --slate-200: #d4d4d4;
+    --slate-300: #b8b8b8;
+    --slate-500: #858585;
+    --slate-600: #686868;
+    --slate-700: #424242;
+    --slate-800: #252525;
+    --slate-900: #141414;
 
-    --border: #e2e8f0;
+    --border: #424242;
 
     --shadow-sm:
-        0 1px 2px rgba(15, 23, 42, 0.05);
+        0 1px 2px rgba(0, 0, 0, 0.18);
 
     --shadow-md:
-        0 12px 30px rgba(15, 23, 42, 0.08);
+        0 12px 30px rgba(0, 0, 0, 0.24);
 
     --shadow-lg:
-        0 24px 60px rgba(15, 23, 42, 0.12);
+        0 24px 60px rgba(0, 0, 0, 0.32);
 
     --radius-sm: 10px;
     --radius-md: 16px;
@@ -246,7 +247,7 @@ a {
     font-weight: 900;
 
     box-shadow:
-        0 8px 20px rgba(37, 99, 235, 0.22);
+        0 8px 20px rgba(192, 192, 192, 0.22);
 }
 
 .nav-links {
@@ -323,19 +324,19 @@ a {
     background:
         radial-gradient(
             circle at 85% 20%,
-            rgba(37, 99, 235, 0.13),
+            rgba(192, 192, 192, 0.08),
             transparent 28%
         ),
         radial-gradient(
             circle at 10% 80%,
-            rgba(20, 184, 166, 0.09),
+            rgba(255, 255, 255, 0.04),
             transparent 25%
         ),
         linear-gradient(
             135deg,
             #ffffff 0%,
-            #f8fafc 55%,
-            #eef5ff 100%
+            #f5f5f5 55%,
+            #e5e5e5 100%
         );
 
     border-bottom: 1px solid var(--border);
@@ -352,7 +353,7 @@ a {
     right: -180px;
     top: -180px;
 
-    border: 1px solid rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(192, 192, 192, 0.12);
 
     border-radius: 50%;
 }
@@ -368,7 +369,7 @@ a {
     right: 30px;
     top: -120px;
 
-    border: 1px solid rgba(20, 184, 166, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.04);
 
     border-radius: 50%;
 }
@@ -415,7 +416,7 @@ a {
 .hero h1 {
     max-width: 920px;
 
-    color: var(--slate-950, #020617);
+    color: var(--slate-950, #090909);
 
     font-size: clamp(3.2rem, 8vw, 6.7rem);
 
@@ -618,7 +619,7 @@ a {
 
     border-radius: 30px;
 
-    border: 1px solid rgba(37, 99, 235, 0.20);
+    border: 1px solid rgba(192, 192, 192, 0.20);
 
     z-index: -1;
 }
@@ -704,7 +705,7 @@ a {
 .highlight-card:hover {
     transform: translateY(-5px);
 
-    border-color: rgba(37, 99, 235, 0.25);
+    border-color: rgba(192, 192, 192, 0.25);
 
     box-shadow: var(--shadow-md);
 }
@@ -789,15 +790,15 @@ a {
     background:
         linear-gradient(
             135deg,
-            rgba(37, 99, 235, 0.30),
-            rgba(20, 184, 166, 0.20)
+            rgba(192, 192, 192, 0.30),
+            rgba(255, 255, 255, 0.08)
         );
 }
 
 .skill-card:hover {
     transform: translateY(-6px);
 
-    border-color: rgba(59, 130, 246, 0.40);
+    border-color: rgba(192, 192, 192, 0.40);
 
     background:
         linear-gradient(
@@ -821,11 +822,11 @@ a {
     background:
         linear-gradient(
             135deg,
-            rgba(59, 130, 246, 0.18),
-            rgba(20, 184, 166, 0.14)
+            rgba(192, 192, 192, 0.12),
+            rgba(255, 255, 255, 0.06)
         );
 
-    color: #93c5fd;
+    color: #c0c0c0;
 
     font-size: 0.8rem;
     font-weight: 850;
@@ -840,7 +841,7 @@ a {
 }
 
 .skill-card p {
-    color: #a8b5c7;
+    color: #b8b8b8;
 
     font-size: 0.91rem;
 }
@@ -858,12 +859,12 @@ a {
     background:
         radial-gradient(
             circle at 90% 10%,
-            rgba(37, 99, 235, 0.18),
+            rgba(192, 192, 192, 0.10),
             transparent 30%
         ),
         radial-gradient(
             circle at 10% 90%,
-            rgba(20, 184, 166, 0.10),
+            rgba(255, 255, 255, 0.04),
             transparent 28%
         ),
         var(--navy-950);
@@ -872,7 +873,7 @@ a {
 }
 
 #skills .section-label {
-    color: #60a5fa;
+    color: #c0c0c0;
 }
 
 #skills h2 {
@@ -880,7 +881,7 @@ a {
 }
 
 #skills .section-intro {
-    color: #94a3b8;
+    color: #b8b8b8;
 }
 
 
@@ -950,7 +951,7 @@ a {
 .project-card:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(37, 99, 235, 0.22);
+    border-color: rgba(192, 192, 192, 0.22);
 
     box-shadow: var(--shadow-lg);
 }
@@ -1133,7 +1134,7 @@ a {
     background:
         radial-gradient(
             circle at 90% 20%,
-            rgba(37, 99, 235, 0.18),
+            rgba(192, 192, 192, 0.10),
             transparent 30%
         ),
         linear-gradient(
@@ -1162,7 +1163,7 @@ a {
 }
 
 .contact-section .section-label {
-    color: #60a5fa;
+    color: #c0c0c0;
 }
 
 .contact-section h2 {
@@ -1170,7 +1171,7 @@ a {
 }
 
 .contact-section .section-intro {
-    color: #a8b5c7;
+    color: #b8b8b8;
 }
 
 .contact-links {
@@ -1206,9 +1207,9 @@ a {
 .site-footer {
     padding: 34px 0;
 
-    background: #050d18;
+    background: #090909;
 
-    color: #94a3b8;
+    color: #b8b8b8;
 
     border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -1272,7 +1273,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid rgba(59, 130, 246, 0.45);
+    outline: 3px solid rgba(192, 192, 192, 0.75);
 
     outline-offset: 4px;
 }

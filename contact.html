@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Antenyi Joseph Ochohepo about software development, backend systems, web applications, and project opportunities.">
+    <meta name="theme-color" content="#080d18">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://antenyijoseph20-glitch.github.io/portfolio/contact.html">
+    <title>Contact | Antenyi Joseph Ochohepo</title>
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="page-container page-navbar" aria-label="Main navigation">
+            <a class="page-logo" href="index.html#home" aria-label="Antenyi Joseph Ochohepo home">
+                <span class="page-logo-mark" aria-hidden="true">AJ</span>
+                <span>Antenyi Joseph Ochohepo</span>
+            </a>
+
+            <button class="menu-toggle" type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="primary-navigation"
+                    aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+
+            <div id="primary-navigation" class="nav-links">
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#experience">Approach</a>
+                <a class="nav-contact active" href="contact.html" aria-current="page">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="page-container">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h1>Let’s talk about <span class="gradient-text">what you’re building.</span></h1>
+                <p class="page-lead">
+                    Have a software project, collaboration idea, or professional
+                    opportunity in mind? Send a message or connect with me using
+                    the contact details below.
+                </p>
+            </div>
+        </section>
+
+        <section class="page-section" aria-labelledby="contact-heading">
+            <div class="page-container">
+                <div class="contact-grid">
+                    <aside class="contact-panel">
+                        <p class="section-kicker">CONTACT DETAILS</p>
+                        <h2 id="contact-heading">Start a conversation.</h2>
+                        <p>
+                            The simplest way to reach me is by email. You can
+                            also view my professional profile and software work.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <strong>Email</strong>
+                                <a href="mailto:antenyi.joseph20@gmail.com">antenyi.joseph20@gmail.com</a>
+                            </div>
+
+                            <div class="contact-method">
+                                <strong>LinkedIn</strong>
+                                <a href="https://www.linkedin.com/in/antenyi-joseph-727a21181"
+                                   target="_blank" rel="noopener noreferrer">
+                                    View my LinkedIn profile ↗
+                                </a>
+                            </div>
+
+                            <div class="contact-method">
+                                <strong>GitHub</strong>
+                                <a href="https://github.com/antenyijoseph20-glitch"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Explore my repositories ↗
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <section class="contact-panel" aria-labelledby="message-heading">
+                        <p class="section-kicker">SEND A MESSAGE</p>
+                        <h2 id="message-heading">Tell me about your project.</h2>
+
+                        <!-- Configure a real Formspree endpoint before publishing this form. -->
+                        <form class="contact-form" onsubmit="return false;"
+                              action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+                              method="POST">
+                            <input type="hidden" name="_subject"
+                                   value="Portfolio contact message">
+
+                            <div class="form-field">
+                                <label for="contact-name">Your name</label>
+                                <input id="contact-name" name="name"
+                                       type="text" autocomplete="name"
+                                       placeholder="Enter your name"
+                                       maxlength="100" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-email">Email address</label>
+                                <input id="contact-email" name="email"
+                                       type="email" autocomplete="email"
+                                       placeholder="you@example.com"
+                                       maxlength="254" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message"
+                                          placeholder="Briefly describe your enquiry..."
+                                          minlength="10" maxlength="5000"
+                                          required></textarea>
+                            </div>
+
+                            <button class="button-link" type="submit" disabled>
+                                Send message <span aria-hidden="true">→</span>
+                            </button>
+
+                            <p class="form-note">
+                                Online form submission is temporarily unavailable
+                                while it is configured. Please use the email link
+                                above to contact me.
+                            </p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-container page-footer-content">
+            <div>
+                <a class="footer-name" href="index.html#home">Antenyi Joseph Ochohepo</a>
+                <p class="footer-copy">Software Developer</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="index.html#home">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+            </nav>
+            <p class="footer-copy">&copy; <span id="current-year">2026</span> Antenyi Joseph Ochohepo.</p>
+        </div>
+    </footer>
+</body>
+</html>
